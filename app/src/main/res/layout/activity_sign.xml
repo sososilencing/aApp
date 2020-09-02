@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="sign"
+            type="com.example.novel.ActivitySign" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ActivitySign"
+        android:background="@drawable/login_background">
+
+        <EditText
+            android:id="@+id/email_sign"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:layout_above="@id/password_sign"
+            android:background="@drawable/fillet"
+            android:hint="@string/email"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/nickname_sign"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"
+            android:singleLine="true"
+            android:hint="nickname"
+            android:layout_above="@id/email_sign"
+            android:background="@drawable/fillet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
+
+        <EditText
+            android:singleLine="true"
+            android:id="@+id/password_sign"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/fillet"
+            android:gravity="center"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/enroll_sign"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:text="注                  册"
+            android:background="@drawable/ripple_bg"
+            android:backgroundTint="@color/grey40"
+            android:textSize="20sp"
+            android:layout_below="@id/password_sign"
+            android:onClick="onClick"/>
+
+
+    </RelativeLayout>
+</layout>

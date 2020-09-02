@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="novel"
+            type="com.example.novel.model.Novel" />
+        <variable
+            name="user"
+            type="com.example.novel.model.User" />
+    </data>
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ActivityRandNovel">
+
+            <Button
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_bg"
+                android:backgroundTint="@color/green40"
+                android:text="@{novel.title}"
+                android:onClick="onClick"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/title"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="20sp"
+                android:background="@drawable/ripple_bg"
+                android:onClick="onClick"
+                android:text="@{user.nickname}"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/context"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/author"
+                android:background="@color/grey40"
+                android:text="@{novel.context}"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/words"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="20sp"
+                android:text="300字"
+                android:layout_alignBottom="@id/context" />
+
+            <com.getbase.floatingactionbutton.FloatingActionsMenu
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignBottom="@id/words"
+                >
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    app:fab_size="mini"
+                    android:id="@+id/sequel"
+                    android:onClick="onClick"
+                    android:layout_height="wrap_content"/>
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    app:fab_icon="@color/green40"
+                    android:id="@+id/write"
+                    android:onClick="onClick"
+                    app:fab_size="mini"
+                    android:layout_height="wrap_content"/>
+
+            </com.getbase.floatingactionbutton.FloatingActionsMenu>
+        </RelativeLayout>
+<com.scwang.smart.refresh.footer.ClassicsFooter
+    android:id="@+id/footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:srlAccentColor="@color/black"/>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</layout>

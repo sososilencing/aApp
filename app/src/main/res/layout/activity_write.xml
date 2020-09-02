@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="novel"
+            type="com.example.novel.model.Novel" />
+        <variable
+            name="user"
+            type="com.example.novel.model.User" />
+    </data>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ActivityRandNovel"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_bg"
+                android:hint="标题"
+                android:gravity="center"
+                android:backgroundTint="@color/green40"
+                android:text="@{novel.title}"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/context"
+                android:layout_weight="30"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/grey40"
+                android:cursorVisible="true"
+                android:gravity="top"
+                android:text="@{novel.context}"
+                android:textScaleX="1.5"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_weight="0.1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="right"
+                android:onClick="onClick"
+                android:text="保存"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+</layout>

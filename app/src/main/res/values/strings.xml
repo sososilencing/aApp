@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">随你而动</string>
+    <string name="account_string">输入你邮箱名</string>
+    <string name="email">Email:</string>
+    <string name="password">Password:</string>
+    <string name="password_string">输入你的密码</string>
+</resources>

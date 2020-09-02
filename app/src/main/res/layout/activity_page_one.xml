@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="novel"
+            type="com.example.novel.model.Novel" />
+        <variable
+            name="user"
+            type="com.example.novel.model.User" />
+    </data>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ActivityRandNovel">
+
+            <Button
+                android:id="@id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_bg"
+                android:backgroundTint="@color/green40"
+                android:text="@{novel.title}"
+                android:onClick="onClick"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@id/author"
+                android:layout_width="wrap_content"
+                android:background="@drawable/ripple_bg"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/title"
+                android:text="@{user.nickname}"
+                android:layout_margin="20sp" />
+
+            <TextView
+                android:id="@id/context"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/author"
+                android:background="@color/grey40"
+                android:text="@{novel.context}"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@id/words"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="20sp"
+                android:text="300字"
+                android:layout_alignBottom="@id/context" />
+
+        </RelativeLayout>
+
+</layout>
