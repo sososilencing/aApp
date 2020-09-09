@@ -34,6 +34,7 @@ import retrofit2.Retrofit;
 import static com.example.novel.server.Method.GetGson;
 import static com.example.novel.server.Method.GetInfo;
 import static com.example.novel.server.Method.GetRetrofit;
+import static com.example.novel.server.Method.USER;
 
 public class ActivityLogin extends ActivityMain implements View.OnClickListener {
     private static final String TAG = "ActivityLogin";
@@ -103,7 +104,7 @@ public class ActivityLogin extends ActivityMain implements View.OnClickListener 
                                 String json = gson.toJson(tokenUser.getUser());
                                 editor.putString("user",json);
                                 editor.apply();
-
+                                USER = tokenUser.getUser();
                                 COOK = tokenUser.getToken();
                                 intent = new Intent(ActivityLogin.this, ActivityRandNovel.class);
                                 startActivity(intent);  // 这里之前要不userToken 传过去

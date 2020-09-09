@@ -10,6 +10,10 @@
             name="user"
             type="com.example.novel.model.User" />
     </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,7 +23,7 @@
 
             <EditText
                 android:id="@+id/title"
-                android:layout_weight="2"
+                android:layout_weight="1.5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ripple_bg"
@@ -28,6 +32,7 @@
                 android:backgroundTint="@color/green40"
                 android:text="@{novel.title}"
                 android:textAllCaps="false"
+                android:layout_marginBottom="10dp"
                 android:textSize="30sp" />
 
             <EditText
@@ -53,5 +58,5 @@
                 android:text="保存"
                 android:textSize="20sp" />
         </LinearLayout>
-
+    </ScrollView>
 </layout>

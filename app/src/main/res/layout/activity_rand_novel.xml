@@ -77,17 +77,26 @@
                 <com.getbase.floatingactionbutton.FloatingActionButton
                     android:layout_width="wrap_content"
                     app:fab_size="mini"
+                    app:fab_icon="@drawable/xu"
                     android:id="@+id/sequel"
                     android:onClick="onClick"
                     android:layout_height="wrap_content"/>
 
                 <com.getbase.floatingactionbutton.FloatingActionButton
                     android:layout_width="wrap_content"
-                    app:fab_icon="@color/green40"
+                    app:fab_icon="@drawable/chuang"
                     android:id="@+id/write"
                     android:onClick="onClick"
                     app:fab_size="mini"
                     android:layout_height="wrap_content"/>
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    app:fab_size="mini"
+                    android:onClick="onClick"
+                    android:id="@+id/user_message"
+                    app:fab_icon="@drawable/ic_launcher_background"
+                    android:layout_height="wrap_content" />
 
             </com.getbase.floatingactionbutton.FloatingActionsMenu>
         </RelativeLayout>

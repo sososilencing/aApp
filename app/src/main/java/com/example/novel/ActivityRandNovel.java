@@ -42,6 +42,7 @@ import retrofit2.Retrofit;
 import static com.example.novel.server.Method.GetGson;
 import static com.example.novel.server.Method.GetInfo;
 import static com.example.novel.server.Method.GetRetrofit;
+import static com.example.novel.server.Method.USER;
 
 public class ActivityRandNovel extends ActivityMain implements View.OnClickListener {
     private static final String TAG = "ActivityRandNovel";
@@ -148,7 +149,7 @@ public class ActivityRandNovel extends ActivityMain implements View.OnClickListe
                 break;
             case R.id.sequel:
                 intent = new Intent(this,ActivityWrite.class);
-                intent.putExtra("title",novel.getTitle());
+                intent.putExtra("pid",novel.getNid());
                 startActivity(intent);
                 break;
             case R.id.title:
@@ -156,8 +157,14 @@ public class ActivityRandNovel extends ActivityMain implements View.OnClickListe
                 intent.putExtra("novelId",novel.getNid());
                 startActivity(intent);
                 break;
+            case R.id.user_message:
+                intent = new Intent(this,ActivityUserMessage.class);
+                intent.putExtra("name",USER.getId());
+                startActivity(intent);
+                break;
             default:
                 break;
         }
+
     }
 }

@@ -3,6 +3,7 @@ package com.example.novel.server;
 import android.util.Log;
 
 import com.example.novel.model.Message;
+import com.example.novel.model.User;
 import com.google.gson.Gson;
 
 import retrofit2.Retrofit;
@@ -12,10 +13,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class Method {
-    public static final String BASE_URLS ="http://192.168.0.109:8080";
+    public static final String BASE_URLS ="http://192.168.137.1:8080";
     private static final String TAG = "Method";
     public static Retrofit retrofit;
     public static Gson gson;
+    public static User USER = new User();
     public static Retrofit GetRetrofit(){
         if (retrofit == null){
              retrofit = new Retrofit.Builder()
